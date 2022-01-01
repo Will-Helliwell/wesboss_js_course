@@ -19,6 +19,19 @@ init = () => {
         articleText.insertAdjacentText("beforeend", " pizza")
     }
 
+    const body = document.querySelector('body');
+    const image = document.querySelector('img');
+    image.classList.toggle('round');
+    // const nice_image = image;
+    // const nice_image = image.classList.add('nice');
+    // body.insertAdjacentElement('afterbegin', nice_image);
+
+    function toggleImageBorder() {
+        image.classList.toggle('round');
+    };
+
+    image.addEventListener('click', toggleImageBorder);
+
 };
 
 document.addEventListener('DOMContentLoaded', init());
