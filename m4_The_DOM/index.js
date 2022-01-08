@@ -1,37 +1,34 @@
 console.log('file loaded');
 
 // Adding an anonymous function doesn't work - because not called?
-// document.addEventListener('DOMContentLoaded', () => {
-//     console.log('document loaded');
-//         const p = document.querySelector('p');
-//         console.log(`p = ${p}`);
-// });
-
-init = () => {
+document.addEventListener('DOMContentLoaded', () => {
     console.log('document loaded');
-    const p = document.querySelector('h2');
-    console.log(p.innerText);
-    console.log(p.textContent);
+        const p = document.querySelector('p');
+        console.log(`p = ${p}`);
+});
 
+init = () => {    
+    const p = document.querySelector('h2');
     const articleText = document.querySelector('p.pizza');
-    console.log(`aT = ${articleText}`);
+    const body = document.querySelector('body');
+    const image = document.querySelector('img');
+
     for (let index = 0; index < 5; index++) {
         articleText.insertAdjacentText("beforeend", " pizza")
     }
 
-    const body = document.querySelector('body');
-    const image = document.querySelector('img');
-    image.classList.toggle('round');
-    // const nice_image = image;
-    // const nice_image = image.classList.add('nice');
-    // body.insertAdjacentElement('afterbegin', nice_image);
+    image.addEventListener('click', () => {
+        toggleImageBorder();
+        addPizza();
+    }
+    );
 
     function toggleImageBorder() {
         image.classList.toggle('round');
     };
-
-    image.addEventListener('click', toggleImageBorder);
-
+    function addPizza() {
+        articleText.insertAdjacentText('afterend', 'pizza ');
+    };
 };
 
 document.addEventListener('DOMContentLoaded', init());
