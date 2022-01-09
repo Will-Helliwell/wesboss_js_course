@@ -1,3 +1,8 @@
+img {
+  transition: all 0.2s;
+}
+
 .round {
     border-radius: 50%;
+    transform: rotate(1turn) scale(2);
   }

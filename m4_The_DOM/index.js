@@ -1,11 +1,9 @@
-console.log('file loaded');
-
 // Adding an anonymous function doesn't work - because not called?
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('document loaded');
-        const p = document.querySelector('p');
-        console.log(`p = ${p}`);
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     console.log('document loaded');
+//         const p = document.querySelector('p');
+//         console.log(`p = ${p}`);
+// });
 
 init = () => {    
     const p = document.querySelector('h2');
