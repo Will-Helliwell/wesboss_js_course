@@ -22,10 +22,13 @@
 
       myButton.addEventListener("click", () => {
         myButton.innerHTML = "go";
-        
+
         setTimeout(() => {
-          myButton.classList.add('red');
-        }, 500);
+          myButton.classList.add('circle');
+          setTimeout(() => {
+            myButton.classList.add('red');
+          }, 1000);
+        }, 1000);
       });
     </script>
 
