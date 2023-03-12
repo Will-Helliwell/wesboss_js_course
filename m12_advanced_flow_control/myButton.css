@@ -1,3 +1,7 @@
+.red {
+    background-color: red;
+}
+
 #myButtonDiv {
   display: flex;
   justify-content: center;
@@ -7,3 +11,4 @@
   height: 200px;
   margin: auto;
 }
+

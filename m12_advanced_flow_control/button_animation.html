@@ -16,12 +16,19 @@
     <div id="myButtonDiv">
       <button id="myButton">Button</button>
     </div>
+
     <script>
       const myButton = document.querySelector("#myButton");
+
       myButton.addEventListener("click", () => {
         myButton.innerHTML = "go";
+        
+        setTimeout(() => {
+          myButton.classList.add('red');
+        }, 500);
       });
     </script>
+
     <link rel="stylesheet" type="text/css" href="./myButton.css"></link>
   </body>
 </html>
