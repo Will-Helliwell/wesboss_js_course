@@ -13,13 +13,15 @@
     <link rel="stylesheet" href="" />
   </head>
   <body>
-    <button id="myButton">Button</button>
+    <div id="myButtonDiv">
+      <button id="myButton">Button</button>
+    </div>
     <script>
-      const myButton = document.querySelector('#myButton');
-      myButton.addEventListener('click', () => {
-        console.log('clicked');
-        myButton.innerHTML = 'go';
+      const myButton = document.querySelector("#myButton");
+      myButton.addEventListener("click", () => {
+        myButton.innerHTML = "go";
       });
     </script>
+    <link rel="stylesheet" type="text/css" href="./myButton.css"></link>
   </body>
 </html>
